@@ -99,7 +99,5 @@ if(${EGE_TARGET_OS} STREQUAL "LINUX" OR ${EGE_TARGET_OS} STREQUAL "WEBGL")
 endif()
 
 if(${EGE_TARGET_OS} STREQUAL "OSX")
-	INCLUDE_DIRECTORIES(${CMAKE_SYSTEM_PREFIX_PATH} "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/")
-    	LINK_DIRECTORIES(${CMAKE_SYSTEM_PREFIX_PATH} "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/")    
 	TARGET_LINK_LIBRARIES(${PROGRAM_NAME} stdc++ m dl pthread glfw3 "-framework Cocoa" "-framework IOKit" "-framework OpenGL" )
 endif()
